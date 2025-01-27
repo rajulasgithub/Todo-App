@@ -44,7 +44,7 @@ const Signup = () => {
   }
 
 
-  axios.post('http://localhost:8000/auth/signup',signup).then((response)=>{
+  axios.post('https://todo-app-yiaz.onrender.com/auth/signup',signup).then((response)=>{
       console.log(response.data)
       localStorage.setItem('loginId',response.data.loginId)
       localStorage.setItem('role',response.data.role)
