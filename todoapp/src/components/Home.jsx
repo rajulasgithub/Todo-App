@@ -26,7 +26,7 @@ const Home = () => {
 
 
     try{
-      const response = await axios.post (`http://localhost:8000/todo/task/${loginId}`,{task})
+      const response = await axios.post (`https://todo-app-yiaz.onrender.com/todo/task/${loginId}`,{task})
       console.log(response.data)
       setMessage(response.data.message)
       alert(response.data.message)
