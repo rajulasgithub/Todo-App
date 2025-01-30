@@ -130,7 +130,7 @@ authroutes.post('/compsignup',async(req,res)=>{
         
         const signup={
             loginId:loginresult._id,
-            usename:req.body.username,
+            username:req.body.username,
         }
         
         const signupresult= await compsignupDB(signup).save();
