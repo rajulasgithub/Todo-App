@@ -132,7 +132,7 @@ const Viewtask = () => {
           <Button variant="secondary" onClick={handleClose}>
             Close
            </Button>
-           <Button variant="primary" onClick={()=>taskupdate(item._id)}    >
+           <Button variant="primary" onClick={()=>taskupdate(item._id)} >
            Update
           </Button>
         </Modal.Footer>

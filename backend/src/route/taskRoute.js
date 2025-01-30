@@ -155,7 +155,7 @@ taskRoute.delete('/deletetask/:id/:loginId',async(req,res)=>{
 taskRoute.put('/updatetask/:id/:loginId',async(req,res)=>{
     try{
         const {task} = req.body;
-        const updatedtask = await taskDB.findByIdAndUpdate({_id:req.params.id,loginId:req.params.loginId},task,{new:true});
+        const updatedtask = await taskDB.findByIdAndUpdate({_id:req.params.id,loginId:req.params.loginId},task);
         if(!updatedtask){
             return res.status(200).json({
                 success:true,
@@ -168,7 +168,7 @@ taskRoute.put('/updatetask/:id/:loginId',async(req,res)=>{
             return res.status(200).json({
                 success:true,
                 error:false,
-                message:"Task not updated Successfully",
+                message:"Task updated Successfully",
                 data:updatedtask,
             })
         }
