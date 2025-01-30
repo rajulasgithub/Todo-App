@@ -42,7 +42,7 @@ const Viewtask = () => {
         console.log(id);
         console.log(status);
         try{
-            const response = await axios.put(`http://localhost:8000/todo/changestatus/${id}/${status}`)
+            const response = await axios.put(`https://todo-app-yiaz.onrender.com/todo/changestatus/${id}/${status}`)
             console.log(response.data.data)
         }
         catch(error){
@@ -55,7 +55,7 @@ const Viewtask = () => {
   const loginId = localStorage.getItem('loginId')
 
   try{
-    const response = await axios.delete(`http://localhost:8000/todo/deletetask/${id}/${loginId}`)
+    const response = await axios.delete(`https://todo-app-yiaz.onrender.com/todo/deletetask/${id}/${loginId}`)
     console.log(response.data.data)
   }
   catch(error){
@@ -76,7 +76,7 @@ const Viewtask = () => {
  const taskupdate= async (id)=>{
      try{
       const loginId = localStorage.getItem('loginId');
-      const response = await axios.put(`http://localhost:8000/todo/updatetask/${id}/${loginId}`,updatedTask)
+      const response = await axios.put(`https://todo-app-yiaz.onrender.com/todo/updatetask/${id}/${loginId}`,updatedTask)
       console.log(response);
      }
      catch(error){
